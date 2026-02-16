@@ -1,15 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shadow Fox Internship</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowFox Internship</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        p {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .task-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f1f5f9;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #334155;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .task-card:hover {
+            background: #ffffff;
+            border-color: #2563eb;
+            color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+    </style>
 </head>
 <body>
-    <h1>Shadow Fox Internship Tasks</h1>
-    
-    <h2>Task 1</h2>
-    <a href="Task1/">Open Task 1</a>
-    
-    <h2>Task 2</h2>
-    <a href="Task2/">Open Task 2</a>
+
+    <div class="container">
+        <h1>ShadowFox Internship Tasks</h1>
+
+        <div class="task-list">
+            <a href="Portfolio/" class="task-card">
+                <span>Task 1: Personal Portfolio</span>
+                <span class="status-badge">Completed</span>
+            </a>
+
+            <a href="#" class="task-card" onclick="alert('Task 2 is coming soon!')">
+                <span>Task 2: Upcoming</span>
+                <span class="status-badge status-pending">In Progress</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            Developed by Pranav Chinnawar
+        </div>
+    </div>
+
 </body>
 </html>
