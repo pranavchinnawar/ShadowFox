@@ -1,0 +1,386 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a1f44;
+color:white;
+transition:0.3s;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 20, 50, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.logo img {
+    height: 45px;
+    filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar {
+    height: 80px;   /* slightly bigger for logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Smooth Underline Animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: gold;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.theme-btn {
+    background: gold;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+    background-image: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=2000&q=90");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6),
+        rgba(0,0,40,0.85)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Main Title */
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Tagline */
+.hero-tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 6px;
+    color: gold;
+    margin-bottom: 15px;
+}
+
+/* Subtitle */
+.hero-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+/* Buttons Container */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: gold;
+    color: black;
+    padding: 14px 35px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* Outline Button */
+.btn-outline {
+    border: 2px solid gold;
+    color: gold;
+    padding: 12px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: gold;
+    color: black;
+}
+
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+.player-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.player-card{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:15px;
+transition:0.4s;
+text-align:center;
+}
+
+.player-card:hover{
+transform:translateY(-10px);
+background:#1e3c72;
+}
+
+.player-card img{
+width:100%;
+height:230px;
+object-fit:contain;
+}
+
+#trophies {
+    padding: 120px 60px;
+    background: linear-gradient(135deg, #001c3d, #002b6b);
+    text-align: center;
+    color: white;
+}
+
+.trophies-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.trophies-header p {
+    color: gold;
+    margin-bottom: 60px;
+    font-size: 1.2rem;
+}
+
+.trophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.trophy-card {
+    background: rgba(255,255,255,0.05);
+    padding: 40px 20px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.trophy-card img {
+    width: 120px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.trophy-card h3 {
+    font-size: 1.4rem;
+    color: gold;
+    letter-spacing: 1px;
+}
+
+.trophy-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.trophy-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.trophy-card:hover img {
+    transform: scale(1.1);
+}
+
+#stats {
+    padding: 120px 60px;
+    background: linear-gradient(135deg, #000814, #001d3d);
+    color: white;
+    text-align: center;
+}
+
+.stats-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stats-header p {
+    color: gold;
+    margin-bottom: 50px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.stats-table th {
+    background: gold;
+    color: black;
+    padding: 15px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.stats-table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stats-table tr:hover {
+    background: rgba(255,215,0,0.08);
+    transition: 0.3s ease;
+}
+
+.stats-table td:first-child {
+    font-weight: 600;
+    color: gold;
+}
+
+.elite-footer {
+    background: linear-gradient(135deg, #000814, #001d3d);
+    color: white;
+    padding: 70px 60px 30px 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+}
+
+.footer-links h3,
+.footer-official h3 {
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.footer-links a,
+.footer-official a {
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-official a:hover {
+    color: gold;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Light Mode */
+.light{
+background:white;
+color:black;
+}
